@@ -1,0 +1,109 @@
+{
+  "categories": [
+    {
+      "id": "guaranteed_returns",
+      "label": "Guaranteed Returns",
+      "weight": 25,
+      "severity": "HIGH",
+      "regulatory_note": "SEBI prohibits any registered entity from promising guaranteed returns. This is a regulatory violation under SEBI (Investment Advisers) Regulations, 2013.",
+      "keywords": [
+        "guaranteed", "assured return", "risk-free", "risk free", "100% profit",
+        "fixed return", "daily income", "double money", "2x return", "3x return",
+        "monthly income guaranteed", "weekly payout confirmed", "guaranteed profit",
+        "no loss", "zero risk", "certain returns", "sure shot", "sureshot profit",
+        "pakka return", "pakka profit", "nuksaan nahi", "guaranteed kamayi",
+        "fixed monthly income", "daily earning guaranteed", "roz kamaao"
+      ]
+    },
+    {
+      "id": "urgency_pressure",
+      "label": "Urgency / Pressure",
+      "weight": 15,
+      "severity": "MEDIUM",
+      "regulatory_note": "Artificial urgency is a classic social engineering tactic used to prevent victims from verifying claims.",
+      "keywords": [
+        "act now", "limited time", "today only", "offer expires", "last chance",
+        "only X slots left", "hurry", "immediate", "urgent", "valid for 24 hours",
+        "closing tonight", "deadline", "last opportunity", "abhi join karo",
+        "sirf aaj", "limited seats", "fast karo", "time is running out",
+        "expires soon", "don't miss", "final call", "closing soon", "aaj hi"
+      ]
+    },
+    {
+      "id": "payment_pressure",
+      "label": "Payment Pressure",
+      "weight": 20,
+      "severity": "HIGH",
+      "regulatory_note": "Legitimate regulated entities never ask for upfront fees, registration charges, or deposits to unlock 'premium' services via personal UPI.",
+      "keywords": [
+        "pay first", "deposit now", "transfer immediately", "advance payment",
+        "registration fee", "unlock premium", "send money to", "pay to UPI",
+        "transfer to account", "paisa bhejo", "pehle payment karo", "fee jama karo",
+        "membership fee", "joining fee", "subscription fee", "activation charge",
+        "processing fee", "unlock karne ke liye", "premium unlock", "abhi pay karo",
+        "payment karo", "deposit karo"
+      ]
+    },
+    {
+      "id": "impersonation_signals",
+      "label": "Impersonation Signals",
+      "weight": 20,
+      "severity": "HIGH",
+      "regulatory_note": "SEBI, NSE, BSE, and RBI do not endorse or recommend specific investment advisors or trading tips. Any such claim is false.",
+      "keywords": [
+        "SEBI approved", "RBI certified", "government scheme", "NSE recommended",
+        "BSE authorised", "exchange verified", "certified by SEBI", "authorised by government",
+        "SEBI registered group", "official SEBI group", "government backed",
+        "RBI approved investment", "NSE certified tips", "BSE certified advisor",
+        "ministry of finance approved", "income tax exempted investment",
+        "SEBI ki taraf se", "sarkar ki yojana", "RBI ki yojana"
+      ]
+    },
+    {
+      "id": "remote_access",
+      "label": "Remote Access Request",
+      "weight": 40,
+      "severity": "CRITICAL",
+      "regulatory_note": "No legitimate financial entity requires remote access to your device. This is the primary vector for account takeover fraud.",
+      "keywords": [
+        "AnyDesk", "TeamViewer", "AnySupport", "QuickSupport", "install this app",
+        "download this APK", "share your screen", "give access to your phone",
+        "remote assistance", "screen sharing", "apna phone share karo",
+        "ye app download karo", "remote se help karta hoon", "screen access do",
+        "apka screen dekhunga", "remote control", "apne phone ka access do"
+      ]
+    },
+    {
+      "id": "channel_isolation",
+      "label": "Channel Isolation",
+      "weight": 15,
+      "severity": "MEDIUM",
+      "regulatory_note": "Directing victims to private, unmonitored channels prevents them from seeking verification or help.",
+      "keywords": [
+        "join our private group", "move to Telegram", "WhatsApp only",
+        "do not share with anyone", "keep this secret", "private channel",
+        "exclusive members only", "sirf is group mein", "kisi ko mat batao",
+        "yeh secret raho", "private group join karo", "exclusive group",
+        "VIP group", "closed group", "invite only", "alag group mein aao",
+        "personal WhatsApp par aao"
+      ]
+    },
+    {
+      "id": "suspicious_url",
+      "label": "Suspicious URL Pattern",
+      "weight": 20,
+      "severity": "MEDIUM-HIGH",
+      "regulatory_note": "Fraudulent websites often use URL tricks to impersonate legitimate entities.",
+      "url_patterns": [
+        "ip_address_url",
+        "http_not_https",
+        "domain_misspelling",
+        "url_shortener",
+        "free_hosting_domain",
+        "recently_registered_domain"
+      ],
+      "url_shorteners": ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "short.io", "cutt.ly", "rb.gy"],
+      "free_hosting_patterns": ["000webhost", "blogspot.com/finance", "wordpress.com/invest", "weebly.com"]
+    }
+  ]
+}

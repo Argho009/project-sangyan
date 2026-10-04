@@ -1,0 +1,21 @@
+{
+  "authorised_apps": [
+    {"name": "Kite", "broker": "Zerodha", "play_store_id": "com.zerodha.kite3", "app_store_id": "1482428823"},
+    {"name": "Groww", "broker": "Groww", "play_store_id": "com.nextbillion.stocks", "app_store_id": "1404153510"},
+    {"name": "Upstox Pro", "broker": "Upstox", "play_store_id": "in.upstox.client", "app_store_id": "1448841501"},
+    {"name": "Angel One", "broker": "Angel One", "play_store_id": "com.msf.aaa", "app_store_id": "1462729622"},
+    {"name": "ICICIdirect", "broker": "ICICI Securities", "play_store_id": "com.icicisecurities.android", "app_store_id": "1027693507"},
+    {"name": "HDFC Securities", "broker": "HDFC Securities", "play_store_id": "com.hdfcsec.mobile.android", "app_store_id": "1040024543"},
+    {"name": "Kotak Stock Trader", "broker": "Kotak Securities", "play_store_id": "com.kotak.securities.kst", "app_store_id": "1080890052"},
+    {"name": "MO Investor", "broker": "Motilal Oswal", "play_store_id": "com.mosl.mobile", "app_store_id": "1101175618"},
+    {"name": "Sharekhan", "broker": "Sharekhan", "play_store_id": "com.sharekhan.android", "app_store_id": "1097754614"},
+    {"name": "SBI Smart", "broker": "SBICAP Securities", "play_store_id": "com.sbismart", "app_store_id": "1062516893"},
+    {"name": "Axis Direct", "broker": "Axis Securities", "play_store_id": "in.axisdirect.android", "app_store_id": "1074556804"},
+    {"name": "Fyers One", "broker": "Fyers", "play_store_id": "com.fyers.fyers_app", "app_store_id": "1466512888"},
+    {"name": "5paisa", "broker": "5Paisa", "play_store_id": "com.fivep.myportfolio", "app_store_id": "1197879462"},
+    {"name": "Dhan", "broker": "Dhan", "play_store_id": "co.dhan.app", "app_store_id": "1557122396"},
+    {"name": "Coin by Zerodha", "broker": "Zerodha", "play_store_id": "com.zerodha.coin", "app_store_id": "1435124659"}
+  ],
+  "known_sideloading_risk": true,
+  "note": "SEBI-authorised apps are ONLY available on official Google Play Store and Apple App Store. Any APK download link is a red flag."
+}

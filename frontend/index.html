@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SANGYAN — Check Before You Pay | पैसा भेजने से पहले जाँचें</title>
+  <meta name="description" content="SANGYAN is India's free pre-payment fraud interception system. Verify SEBI registrations, detect investment scams, and protect yourself before sending money." />
+  <meta name="keywords" content="investment fraud, SEBI verification, scam check, UPI fraud, India cybercrime" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== SCREEN 1: INPUT ===== -->
+<div id="screen-input" class="screen active">
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">SANGYAN</span>
+      </div>
+      <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">हिंदी</button>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="hero-badge">
+      <span class="pulse-dot"></span>
+      <span data-en="Free · Private · No data stored" data-hi="नि:शुल्क · निजी · डेटा संग्रहीत नहीं">Free · Private · No data stored</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span data-en="Check Before You Pay" data-hi="पैसा भेजने से पहले जाँचें">Check Before You Pay</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      <span data-en="Paste a suspicious message, upload a screenshot, or enter a URL. SANGYAN builds an independent evidence chain to verify every claim — before money changes hands." data-hi="संदिग्ध संदेश चिपकाएं, स्क्रीनशॉट अपलोड करें, या URL दर्ज करें। SANGYAN पैसे भेजने से पहले हर दावे को स्वतंत्र रूप से सत्यापित करता है।">
+        Paste a suspicious message, upload a screenshot, or enter a URL. SANGYAN builds an independent evidence chain to verify every claim — before money changes hands.
+      </span>
+    </p>
+
+    <div class="input-options">
+      <!-- Option A: Upload Screenshot -->
+      <div class="input-card" id="card-screenshot" onclick="selectInputType('screenshot')">
+        <div class="input-card-icon">📸</div>
+        <div class="input-card-label" data-en="Upload Screenshot" data-hi="स्क्रीनशॉट अपलोड करें">Upload Screenshot</div>
+        <div class="input-card-sub" data-en="WhatsApp, Telegram, SMS" data-hi="WhatsApp, Telegram, SMS">WhatsApp, Telegram, SMS</div>
+        <input type="file" id="file-input" accept="image/*" onchange="handleFileUpload(event)" style="display:none" />
+      </div>
+
+      <!-- Option B: Paste Message -->
+      <div class="input-card" id="card-text" onclick="selectInputType('text')">
+        <div class="input-card-icon">📋</div>
+        <div class="input-card-label" data-en="Paste Message" data-hi="संदेश चिपकाएं">Paste Message</div>
+        <div class="input-card-sub" data-en="Text, UPI ID, phone number" data-hi="टेक्स्ट, UPI ID, फोन नंबर">Text, UPI ID, phone number</div>
+      </div>
+
+      <!-- Option C: Check a Link -->
+      <div class="input-card" id="card-url" onclick="selectInputType('url')">
+        <div class="input-card-icon">🔗</div>
+        <div class="input-card-label" data-en="Check a Link" data-hi="लिंक जाँचें">Check a Link</div>
+        <div class="input-card-sub" data-en="URL or Telegram handle" data-hi="URL या Telegram हैंडल">URL or Telegram handle</div>
+      </div>
+    </div>
+
+    <!-- Text input area (shown when text or url selected) -->
+    <div class="text-input-area" id="text-input-area" style="display:none">
+      <textarea
+        id="text-content"
+        class="text-area"
+        placeholder="Paste the suspicious message here..."
+        rows="6"
+      ></textarea>
+      <button class="analyze-btn" id="analyze-btn" onclick="analyzeContent()">
+        <span class="analyze-btn-text" data-en="Analyze Now" data-hi="अभी जाँचें">Analyze Now</span>
+        <span class="analyze-btn-icon">→</span>
+      </button>
+    </div>
+
+    <!-- Image preview (shown when screenshot selected) -->
+    <div class="image-preview-area" id="image-preview-area" style="display:none">
+      <div class="upload-zone" id="upload-zone" onclick="document.getElementById('file-input').click()">
+        <div class="upload-zone-icon">⬆️</div>
+        <div class="upload-zone-text" data-en="Click to upload screenshot" data-hi="स्क्रीनशॉट अपलोड करने के लिए क्लिक करें">Click to upload screenshot</div>
+        <div class="upload-zone-sub">PNG, JPG, WEBP up to 10MB</div>
+      </div>
+      <img id="image-preview" src="" alt="Preview" style="display:none; max-width:100%; border-radius:12px; margin-top:12px;" />
+      <button class="analyze-btn" id="analyze-img-btn" onclick="analyzeContent()" style="display:none; margin-top:16px;">
+        <span data-en="Analyze Screenshot" data-hi="स्क्रीनशॉट जाँचें">Analyze Screenshot</span>
+        <span>→</span>
+      </button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p data-en="SANGYAN does not give investment advice. It only checks for fraud risk." data-hi="SANGYAN निवेश सलाह नहीं देता। यह केवल धोखाधड़ी जोखिम की जाँच करता है।">
+      SANGYAN does not give investment advice. It only checks for fraud risk.
+    </p>
+    <div class="footer-links">
+      <a href="https://cybercrime.gov.in" target="_blank" rel="noopener">Report Cybercrime</a>
+      <a href="https://scores.sebi.gov.in" target="_blank" rel="noopener">SEBI SCORES</a>
+      <a href="https://www.sebi.gov.in" target="_blank" rel="noopener">sebi.gov.in</a>
+    </div>
+  </footer>
+</div>
+
+<!-- ===== SCREEN 2: ANALYZING ===== -->
+<div id="screen-analyzing" class="screen">
+  <div class="analyzing-container">
+    <div class="analyzing-logo">🛡️ <span>SANGYAN</span></div>
+    <h2 class="analyzing-title" data-en="Building Evidence Chain..." data-hi="साक्ष्य श्रृंखला बना रहे हैं...">Building Evidence Chain...</h2>
+    <div class="steps-list" id="steps-list">
+      <div class="step" id="step-1">
+        <span class="step-icon">⏳</span>
+        <span class="step-text" data-en="Reading message..." data-hi="संदेश पढ़ रहे हैं...">Reading message...</span>
+      </div>
+      <div class="step" id="step-2">
+        <span class="step-icon">⏳</span>
+        <span class="step-text" data-en="Extracting claims..." data-hi="दावे निकाल रहे हैं...">Extracting claims...</span>
+      </div>
+      <div class="step" id="step-3">
+        <span class="step-icon">⏳</span>
+        <span class="step-text" data-en="Checking SEBI registry..." data-hi="SEBI रजिस्ट्री जाँच रहे हैं...">Checking SEBI registry...</span>
+      </div>
+      <div class="step" id="step-4">
+        <span class="step-icon">⏳</span>
+        <span class="step-text" data-en="Checking for known fraud URLs..." data-hi="ज्ञात धोखाधड़ी URLs जाँच रहे हैं...">Checking for known fraud URLs...</span>
+      </div>
+      <div class="step" id="step-5">
+        <span class="step-icon">⏳</span>
+        <span class="step-text" data-en="Running AI analysis..." data-hi="AI विश्लेषण चला रहे हैं...">Running AI analysis...</span>
+      </div>
+      <div class="step" id="step-6">
+        <span class="step-icon">⏳</span>
+        <span class="step-text" data-en="Building evidence report..." data-hi="साक्ष्य रिपोर्ट बना रहे हैं...">Building evidence report...</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 3: RESULTS ===== -->
+<div id="screen-results" class="screen">
+  <header class="header">
+    <div class="header-inner">
+      <button class="back-btn" onclick="goBack()">← <span data-en="New Check" data-hi="नई जाँच">New Check</span></button>
+      <div class="logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">SANGYAN</span>
+      </div>
+      <button class="share-btn" onclick="shareResult()">📤</button>
+    </div>
+  </header>
+
+  <div class="results-container" id="results-container">
+    <!-- Dynamically populated -->
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

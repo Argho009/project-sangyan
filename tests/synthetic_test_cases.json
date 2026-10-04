@@ -1,0 +1,308 @@
+[
+  {
+    "id": "stop_001",
+    "expected_verdict": "STOP",
+    "description": "Classic demo case — Fake SEBI reg + guaranteed returns + personal UPI",
+    "input_type": "text",
+    "content": "🚨 SEBI Registered Advisor INH000FAKE1 — XYZ Capital Advisory. Guaranteed 25% monthly returns. Zero risk investment. Join our premium Telegram group: t.me/stocktips99. Pay ₹5000 to profit@ybl to unlock premium signals. Offer valid TODAY ONLY! Act now — only 3 slots left!",
+    "expected_flags": ["guaranteed_returns", "urgency_pressure", "payment_pressure", "impersonation_signals"],
+    "expected_contradictions_min": 3,
+    "notes": "Primary demo case for judges"
+  },
+  {
+    "id": "stop_002",
+    "expected_verdict": "STOP",
+    "description": "Known phishing URL + Zerodha impersonation",
+    "input_type": "text",
+    "content": "Dear Zerodha Client, Your account needs urgent verification. Please click: http://zer0dha-verify.blogspot.com/login to avoid account suspension. Enter your credentials and OTP immediately. This link expires in 2 hours.",
+    "expected_flags": ["urgency_pressure", "impersonation_signals", "suspicious_url"],
+    "expected_contradictions_min": 2,
+    "notes": "Tests URL misspelling + free hosting domain"
+  },
+  {
+    "id": "stop_003",
+    "expected_verdict": "STOP",
+    "description": "Remote access request + payment pressure",
+    "input_type": "text",
+    "content": "Hello, I am SEBI certified advisor Rakesh Sharma. I will help you invest in my proven system. First download AnyDesk (ID: 1234567) and share your screen. After I set up the portfolio, transfer ₹25000 advance payment to rakesh.profit@paytm. Guaranteed 3x returns in 30 days.",
+    "expected_flags": ["remote_access", "payment_pressure", "guaranteed_returns", "impersonation_signals"],
+    "expected_contradictions_min": 2,
+    "notes": "Remote access is CRITICAL weight — 40 points"
+  },
+  {
+    "id": "stop_004",
+    "expected_verdict": "STOP",
+    "description": "Pump-and-dump Telegram group invitation",
+    "input_type": "text",
+    "content": "💰 EXCLUSIVE STOCK TIP GROUP 💰 Join our private Telegram channel where our expert analysts share daily guaranteed profit calls. 100% accuracy last month. Members made 2x-3x returns. JOIN NOW: t.me/secretstocktips2024. Do not share with anyone. Limited to 50 members. Join karo abhi!",
+    "expected_flags": ["guaranteed_returns", "urgency_pressure", "channel_isolation"],
+    "expected_contradictions_min": 1,
+    "notes": "Tests channel isolation + Hindi urgency"
+  },
+  {
+    "id": "stop_005",
+    "expected_verdict": "STOP",
+    "description": "Fake government investment scheme with advance fee",
+    "input_type": "text",
+    "content": "PM Wealth Creation Yojana — Government of India. RBI certified investment scheme. Deposit ₹10,000 and receive ₹50,000 in 30 days — guaranteed by Ministry of Finance. Registration fee: ₹500 to pmscheme@ybl. SEBI authorised. Sarkar ki yojana — 100% safe.",
+    "expected_flags": ["impersonation_signals", "guaranteed_returns", "payment_pressure", "urgency_pressure"],
+    "expected_contradictions_min": 2,
+    "notes": "Tests Hindi + government impersonation"
+  },
+  {
+    "id": "stop_006",
+    "expected_verdict": "STOP",
+    "description": "Deepfake finfluencer with unverifiable handle",
+    "input_type": "text",
+    "content": "Famous investor Rakesh Jhunjhunwala's team is sharing FREE stock tips. Follow @rjhunjhunwala_official_tips on Telegram. They gave 200% returns last year. Join the VIP group and pay ₹2000 membership fee to premium@okaxis. NSE recommended. Act now!",
+    "expected_flags": ["guaranteed_returns", "payment_pressure", "urgency_pressure", "impersonation_signals"],
+    "expected_contradictions_min": 2,
+    "notes": "Impersonating deceased investor — very common scam"
+  },
+  {
+    "id": "stop_007",
+    "expected_verdict": "STOP",
+    "description": "Clone broker website with misspelled domain",
+    "input_type": "text",
+    "content": "Login to your trading account at http://growww-invest.com to claim your free bonus. Your KYC is pending. Complete at http://growww-invest.com/kyc immediately. Bonus expires today.",
+    "expected_flags": ["suspicious_url", "urgency_pressure"],
+    "expected_contradictions_min": 1,
+    "notes": "Tests domain misspelling detection (groww vs growww)"
+  },
+  {
+    "id": "stop_008",
+    "expected_verdict": "STOP",
+    "description": "Job offer with security deposit scam",
+    "input_type": "text",
+    "content": "Congratulations! You are selected for Stock Market Analyst position at Alpha Trading Firm. Salary: ₹80,000/month. To confirm your position, deposit ₹15,000 security fee to hr.deposit@ybl. This is refundable after 90 days. Offer valid for 24 hours only.",
+    "expected_flags": ["payment_pressure", "urgency_pressure"],
+    "expected_contradictions_min": 1,
+    "notes": "Job scam variant targeting unemployed investors"
+  },
+  {
+    "id": "stop_009",
+    "expected_verdict": "STOP",
+    "description": "Lottery winning with processing fee to UPI",
+    "input_type": "text",
+    "content": "WINNER ALERT! You have won ₹15,00,000 in NSE Investment Lottery. To claim your prize, pay ₹5,000 processing fee to nselottery@paytm within 2 hours. NSE authorised. Your winning number: NSE2024WIN789. Call 9876543210 immediately.",
+    "expected_flags": ["impersonation_signals", "urgency_pressure", "payment_pressure"],
+    "expected_contradictions_min": 2,
+    "notes": "NSE does not run lotteries"
+  },
+  {
+    "id": "stop_010",
+    "expected_verdict": "STOP",
+    "description": "WhatsApp group promising 3x returns in 30 days",
+    "input_type": "text",
+    "content": "JOIN STOCK MARKET WINNERS WhatsApp Group! Our members made 3x returns in 30 days! Guaranteed daily tips. Risk-free investment strategy. Join now — only on WhatsApp, private group. Ye group mein 100% profit milega. Pay ₹1000 to join: winners@paytm. Hurry — closing tonight!",
+    "expected_flags": ["guaranteed_returns", "urgency_pressure", "payment_pressure", "channel_isolation"],
+    "expected_contradictions_min": 2,
+    "notes": "Hindi Hinglish mix targeting mobile users"
+  },
+
+  {
+    "id": "pause_001",
+    "expected_verdict": "PAUSE",
+    "description": "SEBI reg exists but name does not match",
+    "input_type": "text",
+    "content": "I am Priya Investments, SEBI registered advisor INH000006666. I provide research reports on quality stocks. For subscription, pay ₹3000 per quarter to priya.invest@icicibank.",
+    "expected_flags": [],
+    "expected_contradictions_min": 1,
+    "sebi_mock": {"status": "MISMATCH", "registered_name": "Sharma Financial Advisory"},
+    "notes": "Real registration but wrong entity name — classic impersonation using stolen reg number"
+  },
+  {
+    "id": "pause_002",
+    "expected_verdict": "PAUSE",
+    "description": "URL not in phishing DB but recently registered domain",
+    "input_type": "text",
+    "content": "Check our research platform at https://investorpro-india.com — SEBI registered INH000012345. Subscription ₹5000/year.",
+    "expected_flags": ["suspicious_url"],
+    "expected_contradictions_min": 0,
+    "notes": "Recently registered domain but not yet in PhishTank — absence does not mean safe"
+  },
+  {
+    "id": "pause_003",
+    "expected_verdict": "PAUSE",
+    "description": "Guaranteed returns claimed but entity appears registered",
+    "input_type": "text",
+    "content": "ABC Research INH000099999 providing stock market research. Our model portfolio has given 18% annualised returns historically. Subscription ₹6000/year. Call us at 9800000001.",
+    "expected_flags": [],
+    "expected_contradictions_min": 1,
+    "sebi_mock": {"status": "VERIFIED", "registered_name": "ABC Research"},
+    "notes": "Entity verified but historical return claim needs scrutiny — SEBI prohibits guaranteeing"
+  },
+  {
+    "id": "pause_004",
+    "expected_verdict": "PAUSE",
+    "description": "Telegram handle not matching official handle",
+    "input_type": "text",
+    "content": "Zerodha Market Updates — Official Channel. Join t.me/zerodha_updates_official for daily market insights. Sent from Zerodha support.",
+    "expected_flags": [],
+    "expected_contradictions_min": 1,
+    "notes": "Similar to Zerodha's name but handle doesn't match official verified handle"
+  },
+  {
+    "id": "pause_005",
+    "expected_verdict": "PAUSE",
+    "description": "Multiple urgency signals but no payment request",
+    "input_type": "text",
+    "content": "SEBI registered advisor INH000005555. Our IPO allotment guidance — act now! Today only we are sharing our IPO analysis. Limited slots available. Call 9700000001 before 5PM today.",
+    "expected_flags": ["urgency_pressure"],
+    "expected_contradictions_min": 0,
+    "notes": "Urgency without payment — suspicious but not STOP level"
+  },
+  {
+    "id": "pause_006",
+    "expected_verdict": "PAUSE",
+    "description": "UPI ID not verifiable but no other red flags",
+    "input_type": "text",
+    "content": "Thank you for subscribing to our research service INH000007777. Your subscription payment of ₹2500 can be made to researchfee@hdfcbank. Please mention your name in remarks.",
+    "expected_flags": [],
+    "expected_contradictions_min": 1,
+    "sebi_mock": {"status": "UNAVAILABLE"},
+    "notes": "SEBI check unavailable — payment not verifiable — PAUSE warranted"
+  },
+  {
+    "id": "pause_007",
+    "expected_verdict": "PAUSE",
+    "description": "ML model flags as scam but no official verification match",
+    "input_type": "text",
+    "content": "We provide premium market research. Our team of analysts tracks Nifty 50 stocks. Subscription starts at ₹1500/month. Contact: research@marketguru.in. SEBI registered INH000004444.",
+    "expected_flags": [],
+    "expected_contradictions_min": 0,
+    "notes": "Borderline case — ML might flag due to subscription language"
+  },
+  {
+    "id": "pause_008",
+    "expected_verdict": "PAUSE",
+    "description": "Unverifiable handle but legitimate-sounding offer",
+    "input_type": "text",
+    "content": "Motilal Oswal Research updates — Follow @motilaloswal_research for our daily research briefs on Nifty and Bank Nifty. Free to join.",
+    "expected_flags": [],
+    "expected_contradictions_min": 1,
+    "notes": "Handle similar to Motilal Oswal but doesn't match official handle list"
+  },
+  {
+    "id": "pause_009",
+    "expected_verdict": "PAUSE",
+    "description": "Phone number appears in I4C repository but message content seems normal",
+    "input_type": "text",
+    "content": "Hi, I am Vikram from Capital Advisory INH000003333. I noticed your interest in equity research. Call me at 9000000001 to know more about our subscription services.",
+    "expected_flags": [],
+    "expected_contradictions_min": 0,
+    "i4c_mock": {"status": "IN_REPOSITORY", "identifier": "9000000001"},
+    "notes": "Phone in suspect repo — risk signal but not confirmed — PAUSE with caveat"
+  },
+  {
+    "id": "pause_010",
+    "expected_verdict": "PAUSE",
+    "description": "Foreign investment scheme — cannot verify Indian registry",
+    "input_type": "text",
+    "content": "Dubai Investment Group — Regulated by UAE Securities Authority. Guaranteed 15% per annum returns on Indian equity portfolio. Minimum ₹50,000. Transfer via international wire to our Dubai account. SEBI exemption for foreign entities.",
+    "expected_flags": ["guaranteed_returns", "payment_pressure"],
+    "expected_contradictions_min": 1,
+    "notes": "Foreign entity claiming SEBI exemption — cannot verify + guaranteed returns"
+  },
+
+  {
+    "id": "trust_001",
+    "expected_verdict": "TRUST",
+    "description": "Legitimate Zerodha official communication",
+    "input_type": "text",
+    "content": "Your Zerodha account (Client ID: ZR1234) — Monthly statement for September 2024 is ready. Login to kite.zerodha.com to view. For support: support@zerodha.com or call 080-40402020.",
+    "expected_flags": [],
+    "expected_contradictions_min": 0,
+    "notes": "Official Zerodha domain, no payment request, no guaranteed returns"
+  },
+  {
+    "id": "trust_002",
+    "expected_verdict": "TRUST",
+    "description": "SEBI SCORES complaint acknowledgement",
+    "input_type": "text",
+    "content": "SEBI SCORES: Your complaint (Registration No. SEBI/2024/12345) has been registered successfully. You will receive updates at scores.sebi.gov.in. SEBI Investor Helpline: 1800 22 7575.",
+    "expected_flags": [],
+    "expected_contradictions_min": 0,
+    "notes": "Official SEBI channel — scores.sebi.gov.in domain"
+  },
+  {
+    "id": "trust_003",
+    "expected_verdict": "TRUST",
+    "description": "NSE official margin call notification",
+    "input_type": "text",
+    "content": "NSE Clearing Limited: Your margin shortfall notice for 25-Sep-2024. Please contact your broker immediately. Reference: NSE/CLG/2024/789456. Visit nseindia.com for details.",
+    "expected_flags": [],
+    "expected_contradictions_min": 0,
+    "notes": "Official NSE communication format"
+  },
+  {
+    "id": "trust_004",
+    "expected_verdict": "TRUST",
+    "description": "Verified broker app update notification",
+    "input_type": "text",
+    "content": "Groww App Update: Version 5.2.0 is available on Google Play Store. New features: UPI Autopay for SIPs, improved charts. Update at play.google.com/store/apps/groww. Support: help@groww.in.",
+    "expected_flags": [],
+    "expected_contradictions_min": 0,
+    "notes": "Official Play Store link, official email domain"
+  },
+  {
+    "id": "trust_005",
+    "expected_verdict": "TRUST",
+    "description": "Legitimate SIP reminder from registered mutual fund",
+    "input_type": "text",
+    "content": "HDFC Mutual Fund: Your SIP of ₹5,000 in HDFC Flexi Cap Fund is due on 5-Oct-2024. Funds will be auto-debited from your bank. For queries: investorcare@hdfcfund.com or 1800-3010-6767.",
+    "expected_flags": [],
+    "expected_contradictions_min": 0,
+    "notes": "Registered mutual fund, official email, known brand"
+  },
+  {
+    "id": "trust_006",
+    "expected_verdict": "TRUST",
+    "description": "KYC update from verified registered entity",
+    "input_type": "text",
+    "content": "Angel One: Complete your KYC update before 31-Oct-2024 to continue trading. Visit angelone.in/kyc or call 1800-102-1234. Do NOT share OTP with anyone.",
+    "expected_flags": [],
+    "expected_contradictions_min": 0,
+    "notes": "Official Angel One domain, includes anti-scam warning itself"
+  },
+  {
+    "id": "trust_007",
+    "expected_verdict": "TRUST",
+    "description": "Dividend credit notification from registered company",
+    "input_type": "text",
+    "content": "Infosys Limited: Final dividend of ₹20 per share (FY2024) has been credited to your registered bank account on 28-Sep-2024. Reference: INF/DIV/2024/45678. Registrar: KFin Technologies, kfintech.com.",
+    "expected_flags": [],
+    "expected_contradictions_min": 0,
+    "notes": "Listed company dividend — legitimate format"
+  },
+  {
+    "id": "trust_008",
+    "expected_verdict": "TRUST",
+    "description": "Rights issue notification from listed company",
+    "input_type": "text",
+    "content": "Tata Motors Limited — Rights Issue 2024. As a shareholder you are entitled to apply. Record date: 15-Oct-2024. Ratio: 1:5. Price: ₹450. Apply via your demat account or at tatamotors.com/investors.",
+    "expected_flags": [],
+    "expected_contradictions_min": 0,
+    "notes": "Listed company corporate action notification"
+  },
+  {
+    "id": "trust_009",
+    "expected_verdict": "TRUST",
+    "description": "Income tax refund from official IT department",
+    "input_type": "text",
+    "content": "Income Tax Department: Your ITR refund of ₹12,450 for AY2024-25 has been processed. Amount credited to bank account ending 4567. For status: incometax.gov.in. PAN: ABCDE1234F.",
+    "expected_flags": [],
+    "expected_contradictions_min": 0,
+    "notes": "Official IT department domain, no payment request"
+  },
+  {
+    "id": "trust_010",
+    "expected_verdict": "TRUST",
+    "description": "Official SEBI investor awareness communication",
+    "input_type": "text",
+    "content": "SEBI Investor Awareness: Beware of fraudsters claiming SEBI registration. Always verify at sebi.gov.in/intermediary. Never pay registration fees for investment advice. Helpline: 1800 22 7575. #InvestorAwareness",
+    "expected_flags": [],
+    "expected_contradictions_min": 0,
+    "notes": "This is SEBI itself warning about scams — should score as TRUST"
+  }
+]

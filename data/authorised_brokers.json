@@ -1,0 +1,116 @@
+{
+  "authorised_brokers": [
+    {
+      "name": "Zerodha Broking Limited",
+      "sebi_reg": "INZ000031633",
+      "official_website": "https://zerodha.com",
+      "official_app": "Kite",
+      "official_email_domain": "zerodha.com",
+      "official_support_number": "080-40402020"
+    },
+    {
+      "name": "Groww (Nextbillion Technology Pvt Ltd)",
+      "sebi_reg": "INZ000208032",
+      "official_website": "https://groww.in",
+      "official_app": "Groww",
+      "official_email_domain": "groww.in",
+      "official_support_number": "1800-103-7634"
+    },
+    {
+      "name": "Upstox (RKSV Securities India Pvt Ltd)",
+      "sebi_reg": "INZ000185137",
+      "official_website": "https://upstox.com",
+      "official_app": "Upstox Pro",
+      "official_email_domain": "upstox.com",
+      "official_support_number": "022-61480000"
+    },
+    {
+      "name": "Angel One Limited",
+      "sebi_reg": "INZ000161534",
+      "official_website": "https://angelone.in",
+      "official_app": "Angel One",
+      "official_email_domain": "angelone.in",
+      "official_support_number": "1800-102-1234"
+    },
+    {
+      "name": "ICICI Securities Limited",
+      "sebi_reg": "INZ000183631",
+      "official_website": "https://icicidirect.com",
+      "official_app": "ICICIdirect",
+      "official_email_domain": "icicidirect.com",
+      "official_support_number": "022-40701841"
+    },
+    {
+      "name": "HDFC Securities Limited",
+      "sebi_reg": "INZ000182939",
+      "official_website": "https://hdfcsec.com",
+      "official_app": "HDFC Securities",
+      "official_email_domain": "hdfcsec.com",
+      "official_support_number": "022-39019400"
+    },
+    {
+      "name": "Kotak Securities Limited",
+      "sebi_reg": "INZ000200137",
+      "official_website": "https://kotaksecurities.com",
+      "official_app": "Kotak Stock Trader",
+      "official_email_domain": "kotak.com",
+      "official_support_number": "1800-209-9191"
+    },
+    {
+      "name": "Motilal Oswal Financial Services",
+      "sebi_reg": "INZ000158836",
+      "official_website": "https://motilaloswal.com",
+      "official_app": "MO Investor",
+      "official_email_domain": "motilaloswal.com",
+      "official_support_number": "1800-200-5500"
+    },
+    {
+      "name": "Sharekhan Limited",
+      "sebi_reg": "INZ000171433",
+      "official_website": "https://sharekhan.com",
+      "official_app": "Sharekhan",
+      "official_email_domain": "sharekhan.com",
+      "official_support_number": "1800-22-7500"
+    },
+    {
+      "name": "SBICAP Securities Limited",
+      "sebi_reg": "INZ000200032",
+      "official_website": "https://sbismart.com",
+      "official_app": "SBI Smart",
+      "official_email_domain": "sbismart.com",
+      "official_support_number": "1800-11-2018"
+    },
+    {
+      "name": "Axis Securities Limited",
+      "sebi_reg": "INZ000161633",
+      "official_website": "https://axisdirect.in",
+      "official_app": "Axis Direct",
+      "official_email_domain": "axisdirect.in",
+      "official_support_number": "1860-420-8282"
+    },
+    {
+      "name": "Fyers Securities Pvt Ltd",
+      "sebi_reg": "INZ000060631",
+      "official_website": "https://fyers.in",
+      "official_app": "Fyers One",
+      "official_email_domain": "fyers.in",
+      "official_support_number": "080-46796060"
+    },
+    {
+      "name": "5Paisa Capital Limited",
+      "sebi_reg": "INZ000010231",
+      "official_website": "https://5paisa.com",
+      "official_app": "5paisa",
+      "official_email_domain": "5paisa.com",
+      "official_support_number": "022-48901800"
+    },
+    {
+      "name": "Dhan (Raise Financial Services Pvt Ltd)",
+      "sebi_reg": "INZ000008135",
+      "official_website": "https://dhan.co",
+      "official_app": "Dhan",
+      "official_email_domain": "dhan.co",
+      "official_support_number": "NA"
+    }
+  ]
+}

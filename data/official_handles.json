@@ -1,0 +1,69 @@
+{
+  "official_handles": [
+    {
+      "broker": "Zerodha",
+      "telegram": ["zerodha_official"],
+      "twitter": ["zerodhaonline"],
+      "youtube": ["zerodha"],
+      "website": "zerodha.com",
+      "note": "Zerodha does NOT operate any Telegram groups or WhatsApp groups for tips"
+    },
+    {
+      "broker": "Groww",
+      "telegram": ["growwapp"],
+      "twitter": ["growwapp"],
+      "youtube": ["groww"],
+      "website": "groww.in",
+      "note": "Groww does NOT send investment tips via Telegram or WhatsApp"
+    },
+    {
+      "broker": "Upstox",
+      "telegram": ["upstox"],
+      "twitter": ["upstox"],
+      "youtube": ["upstox"],
+      "website": "upstox.com",
+      "note": "Upstox does NOT operate private tip groups"
+    },
+    {
+      "broker": "Angel One",
+      "telegram": ["angelone_official"],
+      "twitter": ["angeloneindia"],
+      "youtube": ["angelbroking"],
+      "website": "angelone.in",
+      "note": "Angel One does NOT ask for UPI payments for signals"
+    },
+    {
+      "broker": "SEBI",
+      "telegram": [],
+      "twitter": ["sebindia"],
+      "youtube": ["sebionline"],
+      "website": "sebi.gov.in",
+      "note": "SEBI has NO official Telegram group. Any SEBI Telegram group is fraudulent."
+    },
+    {
+      "broker": "NSE India",
+      "telegram": [],
+      "twitter": ["nseindia"],
+      "youtube": ["nseindia"],
+      "website": "nseindia.com",
+      "note": "NSE does NOT provide stock tips or run tip groups"
+    },
+    {
+      "broker": "BSE India",
+      "telegram": [],
+      "twitter": ["bseindia"],
+      "youtube": ["bseindia"],
+      "website": "bseindia.com",
+      "note": "BSE does NOT provide stock tips or run tip groups"
+    }
+  ],
+  "known_fake_patterns": [
+    "zerodha.*tip",
+    "groww.*signal",
+    "sebi.*official.*group",
+    "nse.*recommended",
+    "bse.*authorised.*tips",
+    "rbi.*investment",
+    "government.*scheme.*stock"
+  ]
+}
